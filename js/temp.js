@@ -9,7 +9,8 @@ const fetchWeather = async(cityName) =>{
 const displayWeather = (data) => {
   document.getElementById('temparature').innerText = data.main.temp;
   document.getElementById('place').innerText = data.name;
-  console.log(data);
+  document.getElementById('clouds').innerText = data.weather[0].main;
+  // console.log(data);
 }
 
 const searchWeather = () =>{
